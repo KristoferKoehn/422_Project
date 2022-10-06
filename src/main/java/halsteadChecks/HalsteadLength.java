@@ -40,7 +40,6 @@ public class HalsteadLength extends AbstractCheck {
             TokenTypes.IDENT, TokenTypes.NUM_DOUBLE, TokenTypes.NUM_FLOAT, TokenTypes.NUM_INT, 
             TokenTypes.NUM_LONG, TokenTypes.CHAR_LITERAL, TokenTypes.STRING_LITERAL};
 
-
     @Override
     public int[] getDefaultTokens() {
         return concat(OPERANDS,OPERATORS);
