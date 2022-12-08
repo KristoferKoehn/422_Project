@@ -4,11 +4,11 @@
 "http://eclipse-cs.sourceforge.net/dtds/checkstyle-metadata_1_1.dtd">
 <checkstyle-metadata>
      <rule-group-metadata name="kris checks"  priority="1600">
-        <description>desc</description>
+        <description>%MyCustomChecks.desc</description>
 
-        <rule-metadata name="comment kris" internal-name="CommentCount" parent="TreeWalker">
-            <alternative-name internal-name="countingChecks.CommentCountCheck" />
-            <description>kris comment check</description>
+        <rule-metadata name="expressionCheck.name" internal-name="ExpressionCheck" parent="TreeWalker">
+            <alternative-name internal-name="expressionCheck.ExpressionCheck" />
+            <description>%ExpressionCount.desc</description>
         </rule-metadata>
     </rule-group-metadata>
 </checkstyle-metadata>

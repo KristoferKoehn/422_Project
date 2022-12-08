@@ -1,4 +1,4 @@
-package countingChecks;
+package commentCountCheck;
 
 import com.puppycrawl.tools.checkstyle.api.AbstractCheck;
 import com.puppycrawl.tools.checkstyle.api.DetailAST;
@@ -21,7 +21,7 @@ public class CommentCountCheck extends AbstractCheck {
 
 	@Override
 	public void finishTree(DetailAST aAST) {
-		reportStyleError(aAST, "found a total of " + commentCount + " comments");
+		reportStyleError(aAST, "Number of comments is: " + commentCount);
     	commentCount = 0;
 	}
 	

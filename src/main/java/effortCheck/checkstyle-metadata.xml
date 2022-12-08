@@ -4,11 +4,10 @@
 "http://eclipse-cs.sourceforge.net/dtds/checkstyle-metadata_1_1.dtd">
 <checkstyle-metadata>
      <rule-group-metadata name="kris checks"  priority="1600">
-        <description>desc</description>
-
-        <rule-metadata name="Halstead kris" internal-name="HalsteadLength" parent="TreeWalker">
-            <alternative-name internal-name="halsteadChecks.HalsteadLength" />
-            <description>kris Halstead Length</description>
+        <description>%MyCustomChecks.desc</description>
+        <rule-metadata name="halstead effort" internal-name="EffortCheck" parent="TreeWalker">
+            <alternative-name internal-name="effortCheck.EffortCheck" />
+            <description>halstead effort check</description>
         </rule-metadata>
     </rule-group-metadata>
 </checkstyle-metadata>
