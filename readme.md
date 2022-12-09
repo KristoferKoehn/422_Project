@@ -1,3 +1,13 @@
+For white box tests I got a total of 99.9% statement coverage, missing one statement involved in catching a divide by zero error
+
+For black box, I got 99.9% statement coverage for the same reason. Both tests miss 3 statements and 2 statements respectively.
+
+black box pit test got 100% line coverage with a test strength of 81%
+white box pit test got 100% line coverage and 85% strength.
+
+
+
+
 Operators:
 			TokenTypes.ARRAY_DECLARATOR,
 			TokenTypes.ASSIGN,
@@ -91,4 +101,4 @@ Operands:
 			TokenTypes.STRING_LITERAL
 
 
-doing COmment Line check and Halstead Length check. Wahoo!
+
