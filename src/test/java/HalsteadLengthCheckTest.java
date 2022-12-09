@@ -69,8 +69,8 @@ public class HalsteadLengthCheckTest {
   
   @Test
   void getLengthTest() {
-	  assertEquals(0, length.getLength());
+	  assertEquals(0, length.count);
 	  length.count = 5;
-	  assertEquals(5, length.getLength());
+	  assertEquals(5, length.count);
   }
 }

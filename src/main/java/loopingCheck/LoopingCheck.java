@@ -7,10 +7,10 @@ public class LoopingCheck extends AbstractCheck{
 	 
     private static final String CATCH_MSG = "Number of looping statements is: ";
  
-    int loopingStatementCount = 0;
+    public int loopingStatementCount = 0;
     @Override
     public int[] getDefaultTokens() {
-    	return getRequiredTokens();
+    	return new int[] {TokenTypes.LITERAL_WHILE, TokenTypes.LITERAL_FOR, TokenTypes.DO_WHILE};
     }
     @Override
     public void visitToken(DetailAST aAST) {
@@ -31,15 +31,13 @@ public class LoopingCheck extends AbstractCheck{
 
 	@Override
 	public int[] getRequiredTokens() {
-		return new int[] {TokenTypes.LITERAL_WHILE, TokenTypes.LITERAL_FOR, TokenTypes.DO_WHILE};
+		return getDefaultTokens();
 	}
 	
 	@Override
 	public void finishTree(DetailAST rootAST) {
 		log(0, CATCH_MSG + Integer.toString(loopingStatementCount) + " KAK");		
-		loopingStatementCount = 0;
 	}
-
 
  
 }

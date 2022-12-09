@@ -24,10 +24,9 @@ public class HalsteadLength extends AbstractCheck {
 	    		count = 0;	    	    			    	
 	    }
 
-	    
 		@Override
 		public int[] getAcceptableTokens() {
-			return getRequiredTokens();
+			return getDefaultTokens();
 		}
 
 		@Override
@@ -44,7 +43,4 @@ public class HalsteadLength extends AbstractCheck {
 			log(0, CATCH_MSG + Integer.toString(count) + " KAK");
 		}
 		
-		public int getLength() {
-			return this.count;
-		}
 }

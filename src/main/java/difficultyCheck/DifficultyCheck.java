@@ -7,10 +7,10 @@ public class DifficultyCheck extends AbstractCheck {
 
 	    private static final String CATCH_MSG = "Halstead Difficulty: ";
 	    public int totalOperands = 0;
-	    HashMap operands = new HashMap();
+	    HashMap<String, DetailAST> operands = new HashMap<String, DetailAST>();
 	    public int uniqueOperands = 0;
 	    public int difficulty = 0;
-	    HashMap operators = new HashMap();
+	    HashMap<String, DetailAST> operators = new HashMap<String, DetailAST>();
 	    public int uniqueOperators = 0;
 	    private int[] operandTokens = { TokenTypes.NUM_DOUBLE, TokenTypes.NUM_FLOAT, TokenTypes.NUM_INT, TokenTypes.NUM_LONG, TokenTypes.CHAR_LITERAL, TokenTypes.STRING_LITERAL, TokenTypes.METHOD_CALL, TokenTypes.IDENT };
 	     
@@ -47,7 +47,7 @@ public class DifficultyCheck extends AbstractCheck {
 	    
 		@Override
 		public int[] getAcceptableTokens() {
-			return getRequiredTokens();
+			return getDefaultTokens();
 		}
 
 		@Override
@@ -76,13 +76,7 @@ public class DifficultyCheck extends AbstractCheck {
 		}
 		
 		public int calculateHalsteadDifficulty() {
-			if(this.uniqueOperands != 0) {
-			difficulty = (this.uniqueOperators/2) * (this.totalOperands  / this.uniqueOperands);
-			}
-			else {
-				difficulty = 0;
-			}
-			return difficulty;
+			return totalOperands == 0 ? 0 : (this.uniqueOperators/2) * (this.totalOperands  / this.uniqueOperands);
 		}
 	
 		

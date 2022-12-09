@@ -25,7 +25,7 @@ public class OperandsCheck extends AbstractCheck{
 
 	@Override
 	public int[] getAcceptableTokens() {
-		return getRequiredTokens();
+		return getDefaultTokens();
 	}
 
 	@Override
@@ -37,7 +37,6 @@ public class OperandsCheck extends AbstractCheck{
 	@Override
 	public void finishTree(DetailAST rootAST) {
 		log(0, CATCH_MSG + Integer.toString(OperandsCount) + " KAK");		
-		OperandsCount = 0;
-		
 	}
+	
 }

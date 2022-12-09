@@ -36,7 +36,7 @@ public class CommentLineCheck extends AbstractCheck {
 	@Override
 	public int[] getAcceptableTokens() {
 		// TODO Auto-generated method stub
-		 return getDefaultTokens();
+		 return getRequiredTokens();
 	}
 
 	@Override
